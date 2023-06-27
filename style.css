@@ -2,33 +2,85 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html{font-size: 62.5%;}
+body{background-color: #040714;}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    color: whitesmoke; 
+    font-weight: 600;
 }
 
 .cont{
     display: flex;
-    margin: 1em auto;
+    margin: 1rem auto;
     padding: 0 3em;
     justify-content: center;
     align-items: center;
 }
-.grid div{
-   max-width: 100% !important;
+#search{
+    display: flex;
+    margin: 0.5rem 0 2rem 0;
+    text-align: center;
+    justify-content: center;
 }
-
+#search input{
+    outline: 0;
+    padding: 0.3rem;
+    width: 30rem;
+    background-color: rgb(83, 83, 83);
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 0.25rem;
+}
+#search input:focus{
+    outline: 0;
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.5s;
+}
+#search input::placeholder{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+#search input[type="text"]{
+    color: white;
+}
+#search button{
+    background-color: rgb(60, 177, 255);
+    border: 1px solid rgb(60, 177, 255);
+    border-radius: 0;
+    margin-left: 0.1rem;
+    width: 12rem;
+}
 .grid{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: fit-content;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    justify-items: center;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    align-items: start;
+    gap: 20px;  
+}
 
-    /*
-    /* align-items: center;
-    justify-content: center;
-    align-items: center; */
-    /* column-gap: 10em;
-    row-gap: 30px;
-    justify-content: space-between; */ 
-    
+.grid div{
+    display: flex;
+    flex-direction: column;
+    width: 20rem; max-height: 35rem;
+ }
+.grid .title{
+    color: aliceblue; 
+    width: auto;
+    min-height: 1rem;
+    margin: 0.75rem 0.5rem 0 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.grid div img{
+    border: 1px solid black;
+    border-radius: 1rem;
+   min-width: 10rem;
 }
