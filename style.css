@@ -58,29 +58,53 @@ h1{
 .grid{
     display: grid;
     width: 100%;
-    grid-template-rows: fit-content;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     justify-items: center;
-    justify-content: center;
+    justify-content: center !important;
     align-items: start;
     gap: 20px;  
 }
 
-.grid div{
+.grid .card{
     display: flex;
     flex-direction: column;
     width: 20rem; max-height: 35rem;
  }
+
+ .grid .card img{
+   width: 20rem;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 1rem;
+    min-width: 10rem;
+    z-index: 0;
+}
+.card .intro {
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
 .grid .title{
     color: aliceblue; 
     font-weight: 500;
-    min-height: 1rem;
-    margin: 0.75rem 0.5rem 0 0.5rem;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     text-align: center;
+    width: inherit;
 }
-.grid div img{
-    border: 1px solid black;
-    border-radius: 1rem;
-   min-width: 10rem;
+/* .card :hover, .card .intro:hover{
+    opacity: 1;
+} */
+
+.card .intro a h3{
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    /* overflow: hidden; */
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    bottom:  2rem;
+    background-color: #020202;
+    width: 100%;
+    height: 2rem;
 }
